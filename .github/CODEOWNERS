@@ -1,0 +1,23 @@
+# CODEOWNERS — auto-request reviews from the right people.
+# Replace the placeholder handles with real GitHub usernames.
+
+# Default owner (fallback for anything not matched below)
+*                          @himanshuraj
+
+# Docs
+/docs/                     @himanshuraj
+
+# CI / infra
+/.github/                  @himanshuraj
+
+# Web
+/apps/web/                 @himanshuraj @intern-web-1 @intern-web-2
+
+# Backend
+/apps/backend/             @himanshuraj @intern-be-1 @intern-be-2 @intern-be-3
+
+# Mobile
+/apps/mobile/              @himanshuraj @intern-mob-1 @intern-mob-2
+
+# GenAI / ML
+/services/ml/              @himanshuraj @intern-ml-1 @intern-ml-2 @intern-ml-3

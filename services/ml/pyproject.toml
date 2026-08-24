@@ -1,0 +1,37 @@
+[project]
+name = "neet-ml"
+version = "0.1.0"
+description = "ML / AI service for the NEET Aspirants Community"
+requires-python = ">=3.11"
+dependencies = [
+  "anthropic>=0.34.0",
+  "openai>=1.35.0",
+  "pydantic>=2.7.0",
+  "pymongo>=4.7.0",
+  "python-dotenv>=1.0.1",
+  "tenacity>=8.3.0",
+  "numpy>=1.26.0",
+  "scikit-learn>=1.5.0",
+  "sentence-transformers>=2.7.0",
+  "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+  "pytest-asyncio>=0.23.0",
+  "ruff>=0.5.0",
+  "mypy>=1.10.0",
+  "jupyter>=1.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

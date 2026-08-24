@@ -1,0 +1,78 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.vite/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# Testing / coverage
+coverage/
+.nyc_output/
+
+# Flutter / Dart (mobile)
+apps/mobile/.dart_tool/
+apps/mobile/.flutter-plugins
+apps/mobile/.flutter-plugins-dependencies
+apps/mobile/.packages
+apps/mobile/build/
+apps/mobile/.pub-cache/
+apps/mobile/.pub/
+apps/mobile/ios/Pods/
+apps/mobile/ios/.symlinks/
+apps/mobile/ios/Flutter/Flutter.framework
+apps/mobile/ios/Flutter/Flutter.podspec
+apps/mobile/android/.gradle/
+apps/mobile/android/local.properties
+apps/mobile/android/app/build/
+apps/mobile/**/*.g.dart
+apps/mobile/**/*.freezed.dart
+
+# Uploads / runtime artifacts
+apps/backend/uploads/
+apps/backend/tmp/
+
+# Python (services/ml)
+services/ml/.venv/
+services/ml/**/__pycache__/
+services/ml/**/*.py[cod]
+services/ml/.pytest_cache/
+services/ml/.mypy_cache/
+services/ml/.ruff_cache/
+services/ml/**/*.egg-info/
+services/ml/data/eval-runs/*
+!services/ml/data/eval-runs/baseline/
+services/ml/data/embeddings-cache/
+
+# Misc
+*.pem
