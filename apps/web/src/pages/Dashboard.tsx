@@ -1,4 +1,5 @@
 import { Layout, Menu, Card, Statistic, Row, Col, Progress, Typography, Space, Tag } from 'antd'
+import { useNavigate, useLocation } from 'react-router-dom'
 import {
   DashboardOutlined,
   ExperimentOutlined,
@@ -6,12 +7,36 @@ import {
   TrophyOutlined,
   RobotOutlined,
   BellOutlined,
+  BookOutlined,
 } from '@ant-design/icons'
 
 const { Header, Sider, Content } = Layout
 const { Title, Text } = Typography
 
 export default function Dashboard() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const getSelectedKey = () => {
+    const path = location.pathname
+    if (path.startsWith('/revision')) return 'revision'
+    if (path.startsWith('/dashboard')) return 'dashboard'
+    return 'dashboard'
+  }
+
+  const handleMenuClick = (info: { key: string }) => {
+    switch (info.key) {
+      case 'dashboard':
+        navigate('/dashboard')
+        break
+      case 'revision':
+        navigate('/revision')
+        break
+      default:
+        break
+    }
+  }
+
   return (
     <Layout className="min-h-screen">
       <Sider theme="light" width={220} className="border-r border-slate-200">
@@ -20,11 +45,13 @@ export default function Dashboard() {
         </div>
         <Menu
           mode="inline"
-          defaultSelectedKeys={['dashboard']}
+          selectedKeys={[getSelectedKey()]}
+          onClick={handleMenuClick}
           items={[
             { key: 'dashboard', icon: <DashboardOutlined />, label: 'Dashboard' },
             { key: 'quizzes', icon: <ExperimentOutlined />, label: 'Quizzes' },
             { key: 'tests', icon: <ReadOutlined />, label: 'Tests' },
+            { key: 'revision', icon: <BookOutlined />, label: 'Revision' },
             { key: 'leaderboard', icon: <TrophyOutlined />, label: 'Leaderboard' },
             { key: 'ai-doubt', icon: <RobotOutlined />, label: 'AI Doubt' },
           ]}
