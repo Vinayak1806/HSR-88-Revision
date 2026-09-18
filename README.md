@@ -53,6 +53,7 @@ apps/web/src/
 │
 └── App.tsx                            # Router configuration with lazy-loaded revision routes
 
+```
 ## 🚀 How to Run It
 
 Follow these simple steps to run and test the project on your local machine:
