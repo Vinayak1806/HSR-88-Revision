@@ -69,5 +69,7 @@ Make sure you have the following installed:
 ### Step 1: Clone the Repository
 Open your terminal and clone the repository:
 ```bash
-git clone https://github.com/Vinayak1806/HSR-88-Revision.git
-cd HSR-88-Revision
+git clone -b feat/HSR-88-revision https://github.com/Vinayak1806/HSR-88-Revision.git
+cd HSR-88-Revision/apps/web
+npm install
+npm run dev
